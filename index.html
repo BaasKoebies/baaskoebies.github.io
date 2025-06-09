@@ -1,0 +1,592 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Tlholo Biyana's Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="fas fa-lightbulb fa-2x"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Tlholo Biyana's<br />Portfolio</h1>
+								<p> This website showcases some of the projects I've worked on, including data analysis, machine learning models, data visualizations, and more.
+My work reflects a strong foundation in Python, SQL, and statistical modeling, combined with a practical approach to solving real-world problems. Whether it's uncovering patterns in complex datasets or building predictive models, I'm always excited by the opportunity to learn and create.
+Feel free to explore the projects listed here — each one includes a brief description, the tools used, and links to relevant code or reports.</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Intro</a></li>
+								<li><a href="#odcc">Object Detection - Car Counter</a></li>
+								<li><a href="#rs">Recommendation System</a></li>
+								<li><a href="#pl">Personal Loans</a></li>
+								
+								<!-- <li><a href="#contact">Contact</a></li> -->
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+					<p></p>
+					<ul class="icons">
+									<li><a href="https://www.linkedin.com/in/tlhologello-biyana-scientist/" class="icon brands fa-linkedin"><span class="label">Twitter</span></a></li>
+									<li><a href="https://github.com/BaasKoebies" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="intro">
+								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
+								<header>
+								<h1>Tlhologello Biyana</h1>
+								<p>Data Scientist | Analytics Specialist | Problem Solver</p>
+							</header>
+
+							<main>
+								<h2>Turning Data Into Strategic Insights</h2>
+								<p>Hello and welcome! I'm <strong>Tlhologello Biyana</strong>, a dynamic and results-driven Data Scientist with a passion for unlocking insights and driving business impact through data. I specialize in advanced analytics, predictive modeling, machine learning, and data visualization — all backed by a strong academic foundation including a Master's in Data Science and Advanced Analytics from the University of Cape Town.</p>
+
+								<p>Currently, I serve as an Analyst III at Business Science Corporation in Johannesburg, where I empower organizations to solve complex problems using robust mathematical frameworks and predictive intelligence. From customer segmentation models that boost revenue to real-time dashboards that inform executive decisions, my work bridges the gap between analytics and strategy.</p>
+
+								<h2>A Blend of Technical Expertise and Business Acumen</h2>
+								<p>I've worked with local and multinational clients at board and C-suite level, delivering impactful data solutions that influence key decisions. Highlights of my experience include:</p>
+								<ul>
+								<li>Forecasting market opportunities with high success rates</li>
+								<li>Building efficient, automated analytics processes</li>
+								<li>Presenting actionable insights across diverse stakeholder groups</li>
+								</ul>
+
+								<p>Whether it's Python, SQL, Power BI, or advanced statistical modeling, I bring a holistic, analytical mindset to every project — always aiming to maximize value and clarity.</p>
+
+								<h2>Beyond the Data</h2>
+								<p>Outside the world of analytics, I'm a team player and a leader — having coached the UCT Ladies Soccer 2nd Team to regional league success. I value collaboration, continuous learning, and diversity of thought.</p>
+
+								<strong>Location:</strong> Johannesburg, South Africa
+								</p>
+							</main>
+							</article>
+						
+						<!-- Personal Loans -->
+						<article id="pl">
+							
+							<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+							<h1 >Predicting Personal Loan Acceptance: A Data-Driven Strategy for Banks 🏦</h1>
+							<p class="intro">
+								Converting existing bank depositors into loan customers is a significant revenue opportunity, yet marketing campaigns can be costly and inefficient. This project presents a data science approach to pinpoint which customers have the highest probability of accepting a personal loan, enabling smarter, more targeted marketing efforts.
+							</p>
+
+							<h2>The Challenge: From Data to Decision</h2>
+							<p>
+								The analysis centers on a dataset from Thera Bank, which, like many financial institutions, wants to grow its loan business by marketing to its large base of deposit customers. With a previous campaign yielding a 9% conversion rate, the goal is to build a model that can significantly improve this result by identifying the right customers to target.
+							</p>
+							<p>
+								The project leverages a rich dataset of 5,000 customers, with attributes including demographics (`Age`, `Family` size), financial standing (`Income`, `CCAvg`, `Mortgage`), and their relationship with the bank (`CD Account`, `Securities Account`).
+							</p>
+
+							<h2>The Analytical Journey: Key Steps and Insights</h2>
+							<p>This project follows a structured data science workflow, from cleaning the data to deploying a predictive model. Here’s a breakdown of the key stages and their outcomes:</p>
+
+							<h3>1. Data Cleaning and Preparation</h3>
+							<p>
+								The initial step involved preparing the dataset for analysis. This included removing irrelevant columns like `ID`, converting categorical data (like `Education` and `Family`) into the correct format, and handling data inconsistencies. A notable finding was that 52 younger customers had negative values for `Experience`, which was determined to be a data entry error and corrected by taking the absolute value.
+							</p>
+
+							<h3>2. Exploratory Data Analysis (EDA) 📊</h3>
+							<p>
+								Before building the model, an exploratory analysis was conducted to uncover patterns in the data. This phase revealed which customer attributes were most correlated with loan acceptance.
+							</p>
+							<ul>
+								<li><b>Income is a Key Differentiator:</b> The analysis showed a strong positive correlation between a customer's annual income and their likelihood of taking a personal loan.</li>
+								<li><b>Education Matters:</b> Customers with higher education levels (Graduate or Advanced/Professional) were significantly more likely to accept a loan.</li>
+								<li><b>Other Financial Products:</b> Having a Certificate of Deposit (CD) account with the bank was also a strong indicator of loan acceptance.</li>
+							</ul>
+
+							<h3>3. Building and Refining the Predictive Model ⚙️</h3>
+							<p>
+								Several machine learning models were trained to predict loan acceptance. The primary models used were <strong>Logistic Regression</strong> and a <strong>Decision Tree Classifier</strong>. The Decision Tree, a model that mimics human decision-making with a series of "if-then" questions, proved to be particularly effective.
+							</p>
+							<p>
+								To maximize performance, the Decision Tree was optimized using post-pruning. This technique simplifies the tree after it's built to prevent it from becoming too complex and "overfitting" the data, ensuring it can make accurate predictions on new, unseen customers.
+							</p>
+							<p>
+								The final, post-pruned Decision Tree model achieved an outstanding <strong>accuracy of 97%</strong> and a <strong>recall of 96%</strong>. High recall is especially valuable here, as it means the model successfully identifies 96% of all customers who would actually accept a loan, minimizing missed opportunities for the bank.
+							</p>
+
+							<h2>Getting Started with the Project</h2>
+							<p>
+								This analysis is contained within a single Jupyter Notebook (`model.ipynb`). To run it yourself, you would need a Python environment with standard data science libraries installed, including:
+							</p>
+							<ul>
+								<li><code>pandas</code> for data manipulation</li>
+								<li><code>numpy</code> for numerical operations</li>
+								<li><code>scikit-learn</code> for building and evaluating the machine learning models</li>
+								<li><code>matplotlib</code> and <code>seaborn</code> for data visualization</li>
+							</ul>
+							<p class="repo-link">
+								For a deeper dive into the code and analysis, you can explore the full project on GitHub:
+								<br>
+								<a href="https://github.com/BaasKoebies/DSProjects/blob/main/Portfolio/Project%201%20-%20Personal%20Loans/model.ipynb" target="_blank">View the Project on GitHub</a>
+							</p>
+
+							<div class="conclusion">
+								<h2>Conclusion and Usefulness 💡</h2>
+								<p>
+									This project demonstrates a powerful, practical application of machine learning in the financial sector. By building a highly accurate predictive model, Thera Bank can move from broad-stroke marketing to a precise, data-driven strategy.
+								</p>
+								<p>
+									The most influential factors in predicting loan acceptance were found to be <strong>Income, Education Level, and Family Size</strong>. By focusing marketing efforts on customers who fit this profile—such as those with higher incomes and graduate-level degrees—the bank can significantly increase its campaign conversion rates, boost revenue, and reduce marketing expenditure.
+								</p>
+								<p>
+									The methodology used here is not limited to personal loans; it can be adapted to predict customer interest in a wide range of financial products, such as mortgages, credit cards, or investment services, making it a valuable blueprint for any modern financial institution.
+								</p>
+							</div>
+
+						</article>
+
+						<!-- Recommender System -->
+							<article id="rs">
+								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<h1>Building a Movie Recommender: From Simple Charts to Personalized Picks 🎬</h1>
+								<p class="intro">
+									Ever wonder how Netflix knows you’d love that obscure documentary? The magic is in recommender systems, a type of information filtering that has become the backbone of major tech companies. This project dives into the world of movie recommendations, building a series of engines that grow in complexity and performance.
+								</p>
+
+								<h2>The Goal: Solving the "What to Watch Next" Problem</h2>
+								<p>
+									This analysis uses the "TMDB 5000 Movie Dataset" to build a baseline movie recommender. The goal is not just to build one system, but to explore different strategies—from generic to personalized—to understand their strengths and weaknesses. The project serves as a foundational guide to the three main types of filtering techniques.
+								</p>
+
+								<h2>A Journey Through Recommendation Techniques</h2>
+								<p>The project thoughtfully progresses through three distinct types of recommender systems, each with its own logic and outcomes.</p>
+
+								<h3>1. Demographic Filtering: The "Top Charts" Approach</h3>
+								<p>
+									The simplest approach is to offer generalized recommendations based on a movie's popularity. This system doesn't know anything about you personally; it just assumes that a highly-rated, popular movie is a safe bet for any viewer. To do this fairly, the analysis uses the IMDB weighted rating formula, which balances a movie's average rating with the number of votes it has received.
+								</p>
+								<p>
+									<strong>Key Outcome:</strong> This method produces a reliable "Top 10" list of critically acclaimed films like <em>The Shawshank Redemption</em>, <em>The Godfather</em>, and <em>The Dark Knight</em>—great movies, but not personalized in any way.
+								</p>
+
+								<h3>2. Content-Based Filtering: The "If You Liked This, You'll Like That" Model</h3>
+								<p>
+									This is where recommendations start to get smarter. Content-based systems use a movie's metadata—like its genre, director, cast, and plot keywords—to find other movies that are similar. The project builds two versions:
+								</p>
+								<ul>
+									<li><strong>Plot-Based Recommender:</strong> The first version analyzes only the movie's plot overview. It converts the text into numerical vectors using a technique called <strong>Term Frequency-Inverse Document Frequency (TF-IDF)</strong>, which identifies the most significant words. It then uses <strong>cosine similarity</strong> to find movies with the most similar plot vectors.</li>
+									<li><strong>Metadata-Rich Recommender:</strong> The second, more powerful version creates a "metadata soup" by combining the top 3 actors, the director, genres, and keywords. This captures more nuanced similarities. For instance, it recognizes that fans of one Christopher Nolan film might enjoy his other works, regardless of plot.</li>
+								</ul>
+								<p>
+									<strong>Key Outcome:</strong> When recommending based on <em>The Dark Knight Rises</em>, the metadata-rich recommender correctly suggested other Christopher Nolan films like <em>The Dark Knight</em>, <em>Batman Begins</em>, and even <em>Inception</em>, proving its superior performance.
+								</p>
+
+								<h3>3. Collaborative Filtering: The Power of the Crowd 👥</h3>
+								<p>
+									The most advanced technique explored is collaborative filtering. This system doesn't rely on movie metadata at all. Instead, it makes recommendations by matching people with similar tastes. The project uses a powerful method called <strong>Single Value Decomposition (SVD)</strong> to predict a user's rating for a movie they haven't seen. SVD uncovers latent (hidden) factors in user ratings to make these predictions.
+								</p>
+								<p>
+									<strong>Key Outcome:</strong> Using the <code>surprise</code> library, the SVD model was trained on a user-ratings dataset and achieved a Root Mean Square Error (RMSE) of approximately 0.89, which is a strong result. It could then predict a rating for a specific user and movie—for example, estimating a rating of 2.57 for user ID 1 on movie ID 302.
+								</p>
+
+								<h2>Getting Started with the Project</h2>
+								<p>
+									This entire analysis is built within a Python notebook. To explore or replicate the project, you would need an environment with the following key libraries:
+								</p>
+								<ul>
+									<li><code>pandas</code> for data handling.</li>
+									<li><code>scikit-learn</code> for its <code>TfidfVectorizer</code>, <code>CountVectorizer</code>, and <code>cosine_similarity</code> functions.</li>
+									<li><code>surprise</code> for implementing the SVD-based collaborative filter.</li>
+									<li><code>matplotlib</code> for visualizations.</li>
+								</ul>
+								<p class="repo-link">
+									The full code, showing each step from data cleaning to model evaluation, can view the project on <a href="https://github.com/BaasKoebies/DSProjects/blob/main/Portfolio/Project%201%20-%20Personal%20Loans/model.ipynb" target="_blank">GitHub</a>.
+								</p>
+
+								<div class="conclusion">
+									<h2>Conclusion and Usefulness 💡</h2>
+									<p>
+										This project provides an excellent, step-by-step introduction to the fundamental concepts behind recommender systems. It clearly illustrates the trade-offs between simplicity and personalization, showing how adding more complex data and algorithms can lead to far more intelligent and useful recommendations.
+									</p>
+									<p>
+										The key takeaway, as noted in the notebook, is that the most powerful systems are often <strong>hybrid systems</strong>. By combining the metadata-awareness of content-based filtering with the crowd-sourced intelligence of collaborative filtering, platforms can overcome the limitations of any single approach. This project serves as a perfect foundational framework for anyone looking to build such a system.
+									</p>
+								</div>
+							</article>
+
+					<!-- Object Detection - Car Counter -->
+						<article id="odcc">
+							<span class="image main"><img src="images/pic05.jpg" alt="" /></span>
+							<h1>Building a Real-Time Car Counter with YOLO and SORT 🚗</h1>
+							<p class="intro">
+								Manually counting objects is tedious and prone to error. This computer vision project offers a robust, automated solution for counting cars in a video feed, showcasing how modern machine learning models can be combined to create powerful, real-world applications.
+							</p>
+
+							<h2>The Goal: Automating Traffic Analysis</h2>
+							<p>
+								The project's primary objective is to process a video of a busy road and accurately count the number of vehicles that cross a designated line. To achieve this, it must not only detect vehicles in every frame but also track them to ensure each one is counted only once. This requires a sophisticated, multi-stage pipeline that brings together cutting-edge tools for detection and tracking.
+							</p>
+
+							<h2>The Core Components: A Two-Step Process</h2>
+							<p>The system's logic is elegantly divided into two main tasks: identifying the objects and then tracking their movement over time.</p>
+
+							<h3>1. Object Detection with YOLOv8</h3>
+							<p>
+								The foundation of the system is its ability to "see" the cars. For this, the project uses <strong>YOLO (You Only Look Once)</strong>, a state-of-the-art, real-time object detection model. The script specifically loads the `YOLOv8m` (medium) weights, which provide a great balance between speed and accuracy. In each frame of the video, YOLO identifies all objects it recognizes—such as cars, trucks, and motorbikes—and draws a bounding box around them.
+							</p>
+
+							<h3>2. Object Tracking with SORT</h3>
+							<p>
+								Simply detecting cars in each frame isn't enough; you'd end up counting the same car multiple times. This is where the <strong>SORT (Simple Online and Realtime Tracking)</strong> algorithm comes in. The `sort.py` file provides the logic for this tracker. SORT takes the detections from YOLO and assigns a unique ID to each vehicle. It then uses a <strong>Kalman Filter</strong> to predict the car's position in the next frame, allowing it to maintain the same ID for the vehicle even if its appearance changes slightly. This persistent tracking is the key to accurate counting.
+							</p>
+							
+							<h3>3. The Counting Mechanism</h3>
+							<p>
+								With vehicles detected and tracked, the final step is the count itself. The script draws a virtual line across the road on the video frame. It then continuously checks the center coordinates of each tracked vehicle's bounding box. When a vehicle's center point crosses this line, the system increments a counter and stores the vehicle's unique ID to ensure it is never counted again. The running total is then displayed on the screen for a real-time tally.
+							</p>
+
+							<h2>Getting Started with the Project</h2>
+							<p>
+								To run this project, you would need a Python environment with several key computer vision libraries installed:
+							</p>
+							<ul>
+								<li><code>ultralytics</code> for access to the YOLO model.</li>
+								<li><code>opencv-python</code> (or <code>cv2</code>) for video processing and drawing.</li>
+								<li><code>cvzone</code> as a helper for drawing stylish bounding boxes.</li>
+								<li>The <code>sort.py</code> script must be present in the project directory, as it's a critical dependency for the tracking logic.</li>
+								<li>A video file containing cars or other objects to be tracked.</li>
+							</ul>
+							
+							<div class="conclusion">
+								<h2>Conclusion and Broader Applications 💡</h2>
+								<p>
+									This project is a fantastic demonstration of how to build a practical computer vision application by intelligently combining specialized tools. The pairing of YOLO's powerful detection capabilities with SORT's efficient tracking creates a system that is both accurate and performant.
+								</p>
+
+                                <p>If you want to see the code, you can go to the <a href="https://github.com/BaasKoebies/DSProjects/tree/main/Portfolio/Project%203%20-%20Object%20Detection%20-%20Car%20counter" target="_blank">GitHub</a> repo.</p>
+
+								<p>
+									While this implementation focuses on counting cars, the underlying framework is incredibly versatile and can be adapted for a wide range of use cases across different industries:
+								</p>
+								<ul>
+									<li><strong>Retail Analytics:</strong> Counting the number of customers entering a store to analyze footfall, or monitoring queue lengths to improve staffing.</li>
+									<li><strong>Industrial Automation:</strong> Counting products on a conveyor belt for quality control and inventory management.</li>
+									<li><strong>Security and Surveillance:</strong> Monitoring a restricted area and counting the number of people who enter or leave.</li>
+									<li><strong>Wildlife Conservation:</strong> Tracking and counting animals in their natural habitat to conduct population studies without human interference.</li>
+									<li><strong>Smart Cities:</strong> Analyzing pedestrian flow in public spaces to optimize urban planning or monitoring the number of cars entering a parking garage.</li>
+								</ul>
+								<p>
+									Ultimately, any task that requires counting moving objects in a video feed can benefit from this robust and adaptable solution.
+								</p>
+							</div>
+						</article>
+                        
+						<!-- Contract -->
+							<article id="contact">
+								<h2 class="major">Contact</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="4"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+								<ul class="icons">
+									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</article>
+
+						<!-- Elements -->
+							<article id="elements">
+								<h2 class="major">Elements</h2>
+
+								<section>
+									<h3 class="major">Text</h3>
+									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+									<hr />
+									<h2>Heading Level 2</h2>
+									<h3>Heading Level 3</h3>
+									<h4>Heading Level 4</h4>
+									<h5>Heading Level 5</h5>
+									<h6>Heading Level 6</h6>
+									<hr />
+									<h4>Blockquote</h4>
+									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+									<h4>Preformatted</h4>
+									<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+								</section>
+
+								<section>
+									<h3 class="major">Lists</h3>
+
+									<h4>Unordered</h4>
+									<ul>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Alternate</h4>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Ordered</h4>
+									<ol>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis viverra.</li>
+										<li>Felis enim feugiat.</li>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis lorem.</li>
+										<li>Felis enim et feugiat.</li>
+									</ol>
+									<h4>Icons</h4>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+
+									<h4>Actions</h4>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Table</h3>
+									<h4>Default</h4>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<h4>Alternate</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+								</section>
+
+								<section>
+									<h3 class="major">Buttons</h3>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Primary</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button">Default</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+									</ul>
+									<ul class="actions">
+										<li><span class="button primary disabled">Disabled</span></li>
+										<li><span class="button disabled">Disabled</span></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Form</h3>
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<label for="demo-name">Name</label>
+												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+											</div>
+											<div class="field half">
+												<label for="demo-email">Email</label>
+												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+											</div>
+											<div class="field">
+												<label for="demo-category">Category</label>
+												<select name="demo-category" id="demo-category">
+													<option value="">-</option>
+													<option value="1">Manufacturing</option>
+													<option value="1">Shipping</option>
+													<option value="1">Administration</option>
+													<option value="1">Human Resources</option>
+												</select>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+												<label for="demo-priority-low">Low</label>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-high" name="demo-priority">
+												<label for="demo-priority-high">High</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">Email me a copy</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-human" name="demo-human" checked>
+												<label for="demo-human">Not a robot</label>
+											</div>
+											<div class="field">
+												<label for="demo-message">Message</label>
+												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</section>
+
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Woke DS. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

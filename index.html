@@ -4,11 +4,11 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tlhologello Biyana — Data Scientist &amp; Analytics Consultant</title>
-<meta name="description" content="Tlhologello Biyana — Data Scientist and Analytics Consultant in Johannesburg. Machine learning, A/B testing, customer segmentation and churn modelling." />
+<meta name="description" content="Tlhologello Biyana, Data Scientist and Analytics Consultant in Johannesburg. Causal measurement, experimentation, uplift modelling and optimisation for commercial decisions." />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Tlhologello Biyana — Data Scientist &amp; Analytics Consultant" />
-<meta property="og:description" content="Machine learning, A/B testing, and analytics that inform real decisions." />
+<meta property="og:description" content="I measure and price commercial decisions: experiments, causal inference, optimisation." />
 <meta property="og:url" content="https://baaskoebies.github.io/" />
 <meta property="og:image" content="https://baaskoebies.github.io/images/portrait.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -131,8 +131,8 @@ section.cell{margin-top:3.6rem}
 }
 /* per-cell colour identity */
 #intro .prompt{color:var(--c0)} #intro .cell-out{border-left:5px solid var(--c0)}
-#projects .prompt{color:var(--c1)}
-#beyond .prompt{color:var(--c2)} #beyond .cell-out{border-left:5px solid var(--c2);background:linear-gradient(180deg,#fff, #FBFDF9)}
+#work .prompt{color:var(--c1)} #research .prompt{color:var(--c4)} #research .proj:nth-of-type(1){border-top:4px solid var(--c4)} #earlier .prompt{color:var(--c3)} #earlier .proj:nth-of-type(1){border-top:4px solid var(--c3)}
+#beyond .prompt{color:var(--c2)} #beyond .proj:nth-of-type(1){border-top:4px solid var(--c2)}
 .cell-out h2{font-family:var(--display);font-weight:800;font-size:1.75rem;letter-spacing:-.01em;margin-bottom:.9rem}
 .cell-out h3{font-family:var(--display);font-weight:600;font-size:1.15rem;margin:1.5rem 0 .5rem}
 .cell-out p{margin-bottom:.95rem}
@@ -167,6 +167,19 @@ section.cell{margin-top:3.6rem}
 .chip.k2{background:var(--c2-soft);color:#1E7A1E;border-color:rgba(44,160,44,.3)}
 .chip.k4{background:var(--c4-soft);color:#6E4795;border-color:rgba(148,103,189,.32)}
 .chip b{font-weight:600}
+/* stat grid with context notes */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin:.4rem 0 1.2rem}
+@media (max-width:640px){.stats{grid-template-columns:1fr}}
+.stat{border:1px solid transparent;border-radius:8px;padding:.6rem .8rem;font-family:var(--mono)}
+.stat b{font-weight:600;font-size:1.25rem;display:inline-block;margin-right:.4rem}
+.stat .stat-l{font-size:.8rem}
+.stat .stat-n{display:block;font-family:var(--body);font-size:.85rem;color:var(--ink-soft);line-height:1.4;margin-top:.3rem}
+.stat.k0{background:var(--c0-soft);color:var(--c0);border-color:rgba(31,119,180,.3)}
+.stat.k1{background:var(--c1-soft);color:#C05E00;border-color:rgba(255,127,14,.35)}
+.stat.k2{background:var(--c2-soft);color:#1E7A1E;border-color:rgba(44,160,44,.3)}
+.stat.k4{background:var(--c4-soft);color:#6E4795;border-color:rgba(148,103,189,.32)}
+.section-note{font-size:.95rem;color:var(--ink-soft);margin:-.2rem 0 .4rem;max-width:760px}
+.earlier-list li{margin-bottom:.8rem}
 
 /* ---------- pull quote ---------- */
 .quote{max-width:900px;margin:5rem auto 1rem;padding:0 1.4rem;text-align:center}
@@ -193,7 +206,7 @@ section.cell{margin-top:3.6rem}
 .proj:nth-of-type(2){border-top:4px solid var(--c4)}
 .proj:nth-of-type(3){border-top:4px solid var(--c3)}
 .proj summary{
-  list-style:none;cursor:pointer;display:grid;grid-template-columns:150px 1fr auto;gap:1.2rem;align-items:center;
+  list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:1.2rem;align-items:center;
   padding:1rem 1.3rem;
 }
 .proj summary::-webkit-details-marker{display:none}
@@ -339,7 +352,9 @@ footer .cycle i{display:inline-block;width:10px;height:10px;border-radius:2px;ma
   <a class="brand" href="#top">TB<span style="color:var(--c1)">.</span></a>
   <div class="links">
     <a href="#intro">whoami</a>
-    <a href="#projects">projects</a>
+    <a href="#work">selected work</a>
+    <a href="#research">research</a>
+    <a href="#earlier">earlier work</a>
     <a href="#beyond">beyond</a>
     <a href="https://www.linkedin.com/in/tlhologello-biyana-scientist/" target="_blank" rel="noopener">linkedin ↗</a>
     <a href="https://github.com/BaasKoebies" target="_blank" rel="noopener">github ↗</a>
@@ -357,7 +372,7 @@ footer .cycle i{display:inline-block;width:10px;height:10px;border-radius:2px;ma
 
   <p class="eyebrow"><span class="paren">(</span> hello, world <span class="paren">)</span> — Johannesburg, ZA · /2026/</p>
   <h1>Tlhologello Biyana<br><span class="accent">plots</span> a course<br>through <span class="accent2">data</span>.</h1>
-  <p class="tag">Data Scientist &amp; Analytics Consultant · <b>machine learning, A/B testing, decisions that hold up</b></p>
+  <p class="tag">Data Scientist &amp; Analytics Consultant · <b>I measure and price commercial decisions: experiments, causal inference, optimisation</b></p>
   <p class="scroll-hint">scroll for evidence <span class="arrow">↓</span></p>
 
   <div class="chart-wrap" id="chartWrap">
@@ -366,7 +381,7 @@ footer .cycle i{display:inline-block;width:10px;height:10px;border-radius:2px;ma
       <span>career_trajectory.plot(kind='scatter', trend=True)</span>
     </div>
     <svg id="careerChart" viewBox="0 0 920 340" role="img" aria-label="A playful scatter plot of career milestones from 2018 to 2026 with an upward trend line: tutoring at UCT, forecasting at Drayton Glendower and Mokhobo, an M.Sc. with distinction in coursework, and consulting results at Business Science Corporation."></svg>
-    <div class="chart-note">n = one career · trend statistically significant · error bars omitted for optimism</div>
+    <div class="chart-note">n = one career · milestones only · error bars omitted for optimism</div>
   </div>
 </header>
 
@@ -383,25 +398,24 @@ footer .cycle i{display:inline-block;width:10px;height:10px;border-radius:2px;ma
     <div class="intro-grid">
       <div class="photo-tilt" id="photoTilt"><img src="images/portrait.jpg" alt="Portrait of Tlhologello Biyana" /></div>
       <div>
-        <h2>Turning data into strategic insights</h2>
-        <div class="chips">
-          <span class="chip k0"><b>+5%</b> segment spend</span>
-          <span class="chip k1"><b>R12.4M</b> loss averted</span>
-          <span class="chip k2"><b>4×</b> pitch conversion</span>
-          <span class="chip k4"><b>M.Sc.</b> UCT</span>
+        <h2>Models are easy. Decisions are hard.</h2>
+        <div class="stats">
+          <div class="stat k1"><b>R11.3M</b><span class="stat-l">loss averted</span><span class="stat-n">A proposed retention change lost money even with 100% retention assumed. Shelved.</span></div>
+          <div class="stat k0"><b>+5%</b><span class="stat-l">segment spend</span><span class="stat-n">The targeted bundle that replaced it, measured in a stratified A/B test against a randomised control group.</span></div>
+          <div class="stat k4"><b>M.Sc.</b><span class="stat-l">UCT</span><span class="stat-n">Data Science and Advanced Analytics, distinction in coursework. Dissertation on SVD-based synthetic data.</span></div>
         </div>
-        <p>I'm <strong>Tlhologello Biyana</strong>, a Data Scientist and Analytics Consultant with an M.Sc. Data Science and Advanced Analytics from the University of Cape Town. My work sits at the intersection of machine learning and business strategy: building models that hold up under scrutiny and communicating what they mean to people who have to act on them.</p>
-        <p>I currently work as an Analytics Consultant (Data Science) at Business Science Corporation in Johannesburg, where I partner with clients to solve complex commercial problems using machine learning and advanced analytics. Recent work includes an A/B-tested customer segmentation model that lifted targeted-segment spend by 5%, and an analysis that averted a projected R12.4M net loss by showing that a proposed retention incentive would have cost more than the churn it was meant to prevent.</p>
+        <p>I'm <strong>Tlhologello Biyana</strong>, a Data Scientist and Analytics Consultant at Business Science Corporation in Johannesburg, with an M.Sc. in Data Science and Advanced Analytics from the University of Cape Town. The question I get hired to answer is not "can we predict this" but "should we do this, and what is it worth". That means putting a number on the decision, stating the baseline it is measured against, and being able to rebuild the number from its parts when someone pushes on it.</p>
+        <p>The two headline results above are one story. A telecoms client proposed a product change to stop churn. I showed it would lose R11.3M over three months even if it retained every churner, so it was shelved. The replacement was a segmentation engine that chose which bundle to offer which segment; the first targeted bundle was A/B tested and lifted spend in its segment by 5% over control. Both are written up below.</p>
       </div>
     </div>
-    <h3>A blend of technical expertise and business acumen</h3>
-    <p>I've partnered with clients at Board and C-suite level across financial services, retail, and telecoms, delivering analytics that inform real decisions. Some of what that's looked like:</p>
+    <h3>What I do</h3>
     <ul>
-      <li>Building forecasting models that quadrupled successful business-development pitches year-over-year</li>
-      <li>Designing standardised measurement frameworks so campaign impact can be compared like-for-like</li>
-      <li>Running A/B tests that isolate real effects from confounds, not just correlations</li>
+      <li><strong>Measure.</strong> Stratified A/B tests and matched-pairs designs that separate the effect of an intervention from the customers who would have behaved that way anyway. I designed my practice's post-implementation review framework, which matches campaigns like for like with cosine similarity before measuring uplift.</li>
+      <li><strong>Price.</strong> Every recommendation carries a rand value, a baseline, and the assumption that would flip it.</li>
+      <li><strong>Optimise.</strong> Scenario generation and a Gurobi optimiser for an internal promotion-planning tool that picks which promotions to run. Earlier, in executive search, a forecasting model for when market opportunities would open: in its first year it flagged 28 prospects and about 17 became pitches we won, up from 4 the year before.</li>
+      <li><strong>Ship.</strong> dbt feature and reporting models with scheduled Databricks jobs feeding a value-driver-tree dashboard for a telecoms client; Databricks across several clients; sprint planning and backlog for a 16-person team in Azure DevOps.</li>
     </ul>
-    <p>Python, SQL, Power BI, Databricks, and Gurobi are the tools I reach for most, but the constant across projects is the same: start with the business question, and let that shape the method, not the other way round.</p>
+    <p>Tools: Python, SQL, dbt, Databricks, Power BI, Gurobi, Azure DevOps. Clients in telecoms, retail, financial services and healthcare, at board and executive level.</p>
   </div>
 </section>
 
@@ -411,84 +425,134 @@ footer .cycle i{display:inline-block;width:10px;height:10px;border-radius:2px;ma
   <div class="attr">— fitted on 5+ years of evidence, cross-validated at C-suite level</div>
 </div>
 
-<!-- ============ PROJECTS ============ -->
-<section class="cell" id="projects">
-  <div class="cell-in"><span class="prompt">In&nbsp;[2]:</span><code>portfolio.<span class="fn">load_projects</span>(sort_by='fun')</code></div>
+<!-- ============ SELECTED WORK ============ -->
+<section class="cell" id="work">
+  <div class="cell-in"><span class="prompt">In&nbsp;[2]:</span><code>portfolio.<span class="fn">selected_work</span>(sort_by='impact')</code></div>
+  <p class="section-note">Client work, anonymised. Figures cleared with my employer; no client names or customer data. Written in the same format every project here uses: decision, answer, baseline, method, result, sensitivity, limitations.</p>
 
   <div class="proj-stage">
-  <details class="proj" open style="--d:.0s">
+  <details class="proj" style="--d:.0s">
     <summary>
-      <img src="images/personal-loans.jpg" alt="" loading="lazy" width="150" height="96" />
       <span class="p-head">
-        <h3>Predicting Personal Loan Acceptance 🏦</h3>
-        <span class="metric">accuracy = 0.97 · recall = 0.96 · sklearn DecisionTree, post-pruned</span>
+        <h3>Should we run this retention change? No: it loses R11.3M even if it works perfectly</h3>
+        <span class="metric">telecoms · retention economics · upper-bound argument · R11.3M net loss averted</span>
       </span>
       <span class="toggle"><span class="closed-label">expand +</span><span class="open-label">collapse −</span></span>
     </summary>
     <div class="p-body">
-      <p>Converting existing bank depositors into loan customers is a significant revenue opportunity, yet marketing campaigns can be costly and inefficient. This project presents a data science approach to pinpoint which customers have the highest probability of accepting a personal loan, enabling smarter, more targeted marketing efforts.</p>
-      <h4>The challenge: from data to decision</h4>
-      <p>The analysis centers on a dataset from Thera Bank, which, like many financial institutions, wants to grow its loan business by marketing to its large base of deposit customers. With a previous campaign yielding a 9% conversion rate, the goal is to build a model that can significantly improve this result by identifying the right customers to target.</p>
-      <p>The project leverages a rich dataset of 5,000 customers, with attributes including demographics (<code>Age</code>, <code>Family</code> size), financial standing (<code>Income</code>, <code>CCAvg</code>, <code>Mortgage</code>), and their relationship with the bank (<code>CD Account</code>, <code>Securities Account</code>).</p>
-      <h4>Key steps and insights</h4>
-      <p><strong>Data cleaning:</strong> removing irrelevant columns like <code>ID</code>, converting categorical data into the correct format, and handling inconsistencies. A notable finding was that 52 younger customers had negative values for <code>Experience</code>, determined to be a data entry error and corrected by taking the absolute value.</p>
-      <p><strong>Exploratory analysis:</strong> income showed a strong positive correlation with loan acceptance; customers with higher education levels were significantly more likely to accept; and holding a Certificate of Deposit account was also a strong indicator.</p>
-      <p><strong>Modelling:</strong> Logistic Regression and a Decision Tree Classifier were trained, with the Decision Tree proving particularly effective. It was optimised using post-pruning to prevent overfitting. The final model achieved <strong>97% accuracy</strong> and <strong>96% recall</strong> — high recall matters here because it means the model catches 96% of all customers who would actually accept a loan, minimising missed opportunities for the bank.</p>
-      <h4>Conclusion</h4>
-      <p>The most influential factors were <strong>Income, Education Level, and Family Size</strong>. By focusing marketing on customers who fit this profile, the bank can significantly increase campaign conversion rates while reducing marketing spend — and the same methodology adapts readily to mortgages, credit cards, or investment products.</p>
-      <a class="repo-btn" href="https://github.com/BaasKoebies/DSProjects/blob/main/Portfolio/Project%201%20-%20Personal%20Loans/model.ipynb" target="_blank" rel="noopener">view notebook on GitHub ↗</a>
+      <h4>Decision</h4>
+      <p>A telecoms client proposed a product-configuration change to reduce churn across a base in the 100k to 1M range. Commercial leadership needed to decide whether to roll it out.</p>
+      <h4>Answer</h4>
+      <p>Do not run it. Over the client's standard three-month window the change gives up R35.2M in revenue. The most it could protect, if every single churner stayed, is R23.9M. Net: minus R11.3M. The proposal was shelved.</p>
+      <h4>Baseline</h4>
+      <p>The case for the change rested entirely on churn reduction. The usual approach is to estimate how much churn the change would prevent, which is the number everyone then argues about. I skipped the argument: I assumed the change prevents <em>all</em> churn and asked whether it pays for itself even then.</p>
+      <h4>Method</h4>
+      <ul>
+        <li><strong>A, revenue given up:</strong> the revenue the configuration change forgoes over three months. R35.2M.</li>
+        <li><strong>B, maximum revenue protected:</strong> monthly churners multiplied by three-month average revenue per user. This assumes 100% retention, so it is a ceiling, not an estimate. R23.9M.</li>
+        <li>Same three-month horizon on both sides. Revenue on both sides. All inputs are three-month averages.</li>
+      </ul>
+      <p><code>Net = B &minus; A = R23.9M &minus; R35.2M = &minus;R11.3M</code></p>
+      <h4>Result</h4>
+      <p>No churn outcome closes the gap. To break even, B would have to be 47% above its own ceiling. The decision did not depend on any churn forecast, which is why it held up.</p>
+      <h4>Sensitivity</h4>
+      <ul>
+        <li><strong>Margin instead of revenue?</strong> Margin shrinks both terms and leaves the sign unchanged.</li>
+        <li><strong>Other upside?</strong> Churn reduction was the only benefit claimed, and it was granted in full.</li>
+        <li><strong>What would flip it?</strong> New revenue, not retained revenue: R11.3M of net new revenue over three months, or the equivalent in net new subscribers at the three-month ARPU.</li>
+      </ul>
+      <h4>Limitations</h4>
+      <p>Anonymised, so the components are shown but not their derivation from raw data. The analysis prices the proposal as written; it does not estimate what a cheaper or targeted version would do. That question became the next project.</p>
+      <h4>What happened next</h4>
+      <p>I proposed a targeted alternative instead of a blanket change: decide which products to bundle for which customers. That is the second write-up below.</p>
     </div>
   </details>
 
   <details class="proj" style="--d:.12s">
     <summary>
-      <img src="images/recommender.jpg" alt="" loading="lazy" width="150" height="96" />
       <span class="p-head">
-        <h3>Building a Movie Recommender 🎬</h3>
-        <span class="metric">TF-IDF + cosine similarity · SVD collaborative filter · RMSE ≈ 0.89</span>
+        <h3>Which bundle for which segment? A stratified A/B test: +5% spend over control</h3>
+        <span class="metric">telecoms · segmentation engine · stratified A/B test · +5% spend in the targeted segment</span>
       </span>
       <span class="toggle"><span class="closed-label">expand +</span><span class="open-label">collapse −</span></span>
     </summary>
     <div class="p-body">
-      <p>Ever wonder how Netflix knows you'd love that obscure documentary? The magic is in recommender systems, a type of information filtering that has become the backbone of major tech companies. This project dives into the world of movie recommendations, building a series of engines that grow in complexity and performance, using the TMDB 5000 Movie Dataset.</p>
-      <h4>1. Demographic filtering: the "top charts" approach</h4>
-      <p>The simplest approach offers generalised recommendations based on popularity, using the IMDB weighted rating formula to balance a movie's average rating with its vote count. It produces a reliable Top 10 of critically acclaimed films — great movies, but not personalised in any way.</p>
-      <h4>2. Content-based filtering: "if you liked this, you'll like that"</h4>
-      <p>Content-based systems use a movie's metadata to find similar titles. Two versions were built: a plot-based recommender using <strong>TF-IDF</strong> vectors and <strong>cosine similarity</strong>, and a richer version combining the top 3 actors, director, genres, and keywords. Recommending from <em>The Dark Knight Rises</em>, the metadata-rich version correctly surfaced other Christopher Nolan films including <em>Inception</em>.</p>
-      <h4>3. Collaborative filtering: the power of the crowd</h4>
-      <p>The most advanced technique matches people with similar tastes rather than relying on metadata. Using <strong>Singular Value Decomposition (SVD)</strong> via the <code>surprise</code> library, the model predicts a user's rating for unseen movies, achieving an <strong>RMSE of approximately 0.89</strong>.</p>
-      <h4>Conclusion</h4>
-      <p>The project illustrates the trade-offs between simplicity and personalisation. The key takeaway: the most powerful systems are <strong>hybrid</strong>, combining the metadata-awareness of content-based filtering with the crowd-sourced intelligence of collaborative filtering.</p>
-      <a class="repo-btn" href="https://github.com/BaasKoebies/DSProjects/tree/main/Portfolio/Project%202%20-%20Recommendation%20System" target="_blank" rel="noopener">view project on GitHub ↗</a>
+      <h4>Decision</h4>
+      <p>After the blanket change was shelved, the client still needed to grow revenue from the same base. Which product bundle should be offered to which subscribers?</p>
+      <h4>Answer</h4>
+      <p>Build a segmentation engine that assigns bundles to segments, then test each bundle in a randomised experiment before rolling it out. The first targeted bundle lifted spend in its segment by 5% over control.</p>
+      <h4>Baseline</h4>
+      <p>A randomised control group inside the same segment, over the same period. We assigned treatment and control ourselves. The lift is measured against subscribers who were eligible but not offered the bundle, not against the previous period.</p>
+      <h4>Method</h4>
+      <ul>
+        <li>Segmentation inputs: usage split by voice and data, in-bundle versus out-of-bundle usage, bundle types bought, monthly spend and spend mix, call duration and data volume.</li>
+        <li>Models: k-means for the segments, LightGBM to choose the bundle for each segment.</li>
+        <li>Experiment: stratified A/B test. Eligible subscribers were split into spend bands, then randomly assigned to treatment or control within each band, so the two groups were balanced on average spend per user before the offer.</li>
+        <li>Outcome: usage and spend in the treatment group compared with the control group over the test window.</li>
+      </ul>
+      <h4>Result</h4>
+      <p>+5% spend in the targeted segment relative to control. Read with the first write-up, the two projects are one story: the untargeted change lost money on paper, the targeted one made money in a controlled test.</p>
+      <h4>Sensitivity</h4>
+      <p>The result is for the first bundle in one segment. It does not establish that every bundle in every segment will lift spend. Each bundle is tested before rollout, which is the point of the design.</p>
+      <h4>Limitations</h4>
+      <p>Anonymised. Test duration, group sizes and the confidence interval on the 5% are not reproduced here.</p>
     </div>
   </details>
+  </div>
+</section>
 
-  <details class="proj" style="--d:.24s">
+<!-- ============ RESEARCH ============ -->
+<section class="cell" id="research">
+  <div class="cell-in"><span class="prompt">In&nbsp;[3]:</span><code>portfolio.<span class="fn">research</span>()</code></div>
+  <div class="proj-stage">
+  <details class="proj" style="--d:.0s">
     <summary>
-      <img src="images/car-counter.jpg" alt="" loading="lazy" width="150" height="96" />
       <span class="p-head">
-        <h3>Real-Time Car Counter with YOLO &amp; SORT 🚗</h3>
-        <span class="metric">YOLOv8m detection · SORT + Kalman filter tracking · OpenCV</span>
+        <h3>Generating new data points with singular value decomposition</h3>
+        <span class="metric">M.Sc. minor dissertation · UCT Department of Statistical Sciences · SVD-based synthetic data · three datasets</span>
       </span>
       <span class="toggle"><span class="closed-label">expand +</span><span class="open-label">collapse −</span></span>
     </summary>
     <div class="p-body">
-      <p>Manually counting objects is tedious and prone to error. This computer vision project offers a robust, automated solution for counting cars in a video feed, showcasing how modern machine learning models can be combined into a practical, real-world application.</p>
-      <h4>1. Object detection with YOLOv8</h4>
-      <p>The foundation is <strong>YOLO (You Only Look Once)</strong>, a state-of-the-art real-time object detection model. The script loads the <code>YOLOv8m</code> weights, balancing speed and accuracy, and draws bounding boxes around every vehicle it recognises in each frame.</p>
-      <h4>2. Object tracking with SORT</h4>
-      <p>Detecting cars per-frame isn't enough — you'd count the same car repeatedly. The <strong>SORT</strong> algorithm assigns each vehicle a unique ID and uses a <strong>Kalman filter</strong> to predict its position in the next frame, maintaining identity across frames. This persistent tracking is the key to accurate counting.</p>
-      <h4>3. The counting mechanism</h4>
-      <p>A virtual line is drawn across the road; when a tracked vehicle's centre point crosses it, the counter increments and the ID is stored so it's never counted twice. The running total displays on screen in real time.</p>
-      <h4>Broader applications</h4>
+      <h4>Problem</h4>
+      <p>Small datasets limit model development. The question was whether a dataset can be extended with new rows that keep its distribution and its correlations.</p>
+      <h4>Method</h4>
+      <p>Decompose the data matrix with SVD. Keep the components that explain most of the variance as the signal, and treat the component with the smallest singular value as noise. Resample that noise from its empirical distribution and add it back to the signal to produce new rows.</p>
+      <h4>Data</h4>
+      <p>Abalone (4,177 rows, regression), WHO Life Expectancy (2,938 rows, regression) and NBA rookie (1,340 rows, classification).</p>
+      <h4>Result</h4>
+      <p>Generated data from the full training sets matched the originals on distribution (Kolmogorov-Smirnov tests, reconstruction error) and on downstream model performance, all scored on a held-out test split: R² 0.548 versus 0.567 on Abalone, 0.850 versus 0.858 on Life Expectancy, and accuracy 0.701 versus 0.694 on NBA. Below 50 source rows the similarity broke down.</p>
+      <h4>Limitations</h4>
       <ul>
-        <li><strong>Retail analytics:</strong> footfall counting and queue monitoring</li>
-        <li><strong>Industrial automation:</strong> counting products on a conveyor for quality control</li>
-        <li><strong>Security:</strong> monitoring entries and exits in restricted areas</li>
-        <li><strong>Wildlife conservation:</strong> population studies without human interference</li>
-        <li><strong>Smart cities:</strong> pedestrian flow analysis and parking management</li>
+        <li>Noise is confined to one component, so generated rows cluster near the originals.</li>
+        <li>Binary variables reconstruct worse than continuous ones.</li>
+        <li>The small-sample tests compared a model trained on generated rows against a model trained on all the original data. Two things differ at once: the data is generated, and there is less of it. The fair comparison is against a model trained on the same number of original rows, and that baseline is not in the dissertation. Neither is a comparison with SMOTE or CTGAN.</li>
       </ul>
-      <a class="repo-btn" href="https://github.com/BaasKoebies/DSProjects/tree/main/Portfolio/Project%203%20-%20Object%20Detection%20-%20Car%20counter" target="_blank" rel="noopener">view project on GitHub ↗</a>
+      <p><a href="http://hdl.handle.net/11427/41476" target="_blank" rel="noopener">Read the dissertation on OpenUCT ↗</a></p>
+    </div>
+  </details>
+  </div>
+</section>
+
+<!-- ============ EARLIER WORK ============ -->
+<section class="cell" id="earlier">
+  <div class="cell-in"><span class="prompt">In&nbsp;[4]:</span><code>portfolio.<span class="fn">earlier_work</span>()</code></div>
+  <div class="proj-stage">
+  <details class="proj" style="--d:.0s">
+    <summary>
+      <span class="p-head">
+        <h3>Earlier work</h3>
+        <span class="metric">three tutorial-dataset projects · loan acceptance · movie recommender · car counter · code on GitHub</span>
+      </span>
+      <span class="toggle"><span class="closed-label">expand +</span><span class="open-label">collapse −</span></span>
+    </summary>
+    <div class="p-body">
+      <p>Projects from before the consulting work. Kept here because the code is public; the case studies are a better guide to how I work now.</p>
+      <ul class="earlier-list">
+        <li><strong>Personal loan acceptance (Thera Bank, 5,000 rows).</strong> Post-pruned decision tree, accuracy 0.97 and recall 0.96. For context: 9.6% of customers accept, so predicting "no" for everyone scores 0.904. Accuracy is the wrong metric here. <a href="https://github.com/BaasKoebies/DSProjects/blob/main/Portfolio/Project%201%20-%20Personal%20Loans/model.ipynb" target="_blank" rel="noopener">Loan acceptance notebook ↗</a></li>
+        <li><strong>Movie recommender (TMDB 5000).</strong> Popularity, content-based (TF-IDF, cosine similarity) and collaborative filtering (SVD via <code>surprise</code>, RMSE ≈ 0.89). <a href="https://github.com/BaasKoebies/DSProjects/tree/main/Portfolio/Project%202%20-%20Recommendation%20System" target="_blank" rel="noopener">Recommender repository ↗</a></li>
+        <li><strong>Real-time car counter.</strong> YOLOv8m detection with SORT tracking and a line-crossing counter in OpenCV. <a href="https://github.com/BaasKoebies/DSProjects/tree/main/Portfolio/Project%203%20-%20Object%20Detection%20-%20Car%20counter" target="_blank" rel="noopener">Car counter repository ↗</a></li>
+      </ul>
     </div>
   </details>
   </div>
@@ -496,11 +560,21 @@ footer .cycle i{display:inline-block;width:10px;height:10px;border-radius:2px;ma
 
 <!-- ============ BEYOND ============ -->
 <section class="cell beyond" id="beyond">
-  <div class="cell-in"><span class="prompt">In&nbsp;[3]:</span><code>me.<span class="fn">beyond_the_data</span>()</code></div>
-  <div class="cell-out">
-    <h2>Beyond the data</h2>
-    <p>Outside of analytics, I was a team member of the 1st soccer squad and assistant coach for the women's team at UCT. I value collaboration, continuous learning, and diversity of thought.</p>
-    <p style="font-family:var(--mono);font-size:.85rem;color:var(--ink-soft)"># Location: Johannesburg, South Africa</p>
+  <div class="cell-in"><span class="prompt">In&nbsp;[5]:</span><code>me.<span class="fn">beyond_the_data</span>()</code></div>
+  <div class="proj-stage">
+  <details class="proj" style="--d:.0s">
+    <summary>
+      <span class="p-head">
+        <h3>Beyond the data</h3>
+        <span class="metric">soccer · coaching · Johannesburg</span>
+      </span>
+      <span class="toggle"><span class="closed-label">expand +</span><span class="open-label">collapse −</span></span>
+    </summary>
+    <div class="p-body">
+      <p>Outside of analytics, I was a team member of the 1st soccer squad and assistant coach for the women's team at UCT. I value collaboration, continuous learning, and diversity of thought.</p>
+      <p style="font-family:var(--mono);font-size:.85rem;color:var(--ink-soft)"># Location: Johannesburg, South Africa</p>
+    </div>
+  </details>
   </div>
 </section>
 
@@ -519,7 +593,7 @@ footer .cycle i{display:inline-block;width:10px;height:10px;border-radius:2px;ma
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.9 2.9 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 5 18.3 5.3 18.3 5.3c.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
     </a>
   </div>
-  <p>&copy; Tlhologello Biyana · <span class="pval">p &lt; 0.05 — statistically significant</span></p>
+  <p>&copy; Tlhologello Biyana · <span class="pval">every number on this page has a baseline</span></p>
   <p class="cycle">palette: matplotlib's finest
     <i style="background:#1F77B4" title="C0"></i><i style="background:#FF7F0E" title="C1"></i><i style="background:#2CA02C" title="C2"></i><i style="background:#D62728" title="C3"></i><i style="background:#9467BD" title="C4"></i>
   </p>
@@ -593,7 +667,7 @@ setTimeout(function(){
 
 /* ============ marquee content ============ */
 (function(){
-  const items1 = ['import pandas as pd','fit()','predict()','evaluate()','segment','test','measure','decide','Tlhologello Biyana','data scientist','analytics consultant','Johannesburg'];
+  const items1 = ['import pandas as pd','measure()','price()','decide()','experiment','uplift','baseline','Tlhologello Biyana','data scientist','analytics consultant','Johannesburg'];
   const items2 = ["let's connect","linkedin.com/in/tlhologello-biyana-scientist","github.com/BaasKoebies","let's connect","open to interesting problems"];
   const fill = (id, items) => {
     const half = items.map(t=>`<span>${t}</span><span class="dot">•</span>`).join('');
@@ -614,20 +688,12 @@ setTimeout(function(){
   const marks = [
     [2018.2, .12, 'Tutor, UCT', 'start'],
     [2021.1, .30, 'Data Analytics Specialist, DG&M', 'start'],
-    [2022.4, .40, '4\u00D7 pitch conversion', 'start'],
+    [2022.4, .40, 'Market-opportunity forecasting model', 'start'],
     [2023.7, .55, 'M.Sc. (Distinction, coursework)', 'middle'],
-    [2024.3, .66, 'Analytics Consultant, BSC', 'middle'],
-    [2025.3, .80, '+5% segment spend (A/B-tested)', 'end'],
-    [2026.0, .92, 'R12.4M loss averted', 'end'],
+    [2024.3, .66, 'Joined BSC as Analyst II', 'middle'],
+    [2025.3, .80, '+5% segment spend (stratified A/B test)', 'end'],
+    [2026.0, .92, 'R11.3M loss averted', 'end'],
   ];
-  const noise = [];
-  for (let i = 0; i < 26; i++){
-    const t = i / 25;
-    const yr = x0 + .4 + t * (x1 - x0 - 1);
-    const base = .1 + t * .8;
-    noise.push([yr + (Math.random() - .5) * .3, Math.max(.03, Math.min(.97, base + (Math.random() - .5) * .22))]);
-  }
-
   const NS = 'http://www.w3.org/2000/svg';
   const el = (n, at) => { const e = document.createElementNS(NS, n); for (const k in at) e.setAttribute(k, at[k]); return e; };
 
@@ -650,12 +716,6 @@ setTimeout(function(){
   yl.setAttribute('transform', `rotate(-90 16 ${(PAD_T+H-PAD_B)/2})`);
 
   const cycle = ['#1F77B4','#FF7F0E','#2CA02C','#D62728','#9467BD'];
-  noise.forEach(([yr, v], i) => {
-    const c = el('circle', {cx:X(yr), cy:Y(v), r:3.4, fill:cycle[i % 5], 'fill-opacity':.22});
-    if (!REDUCE){ c.style.opacity = 0; c.style.transition = `opacity .4s ease ${i*35}ms`; onStart(()=>{c.style.opacity=1;}); }
-    svg.appendChild(c);
-  });
-
   const p1 = [X(2018), Y(.10)], p2 = [X(2026.3), Y(.93)];
   const trend = el('line', {x1:p1[0], y1:p1[1], x2:p2[0], y2:p2[1], stroke:'#FF7F0E', 'stroke-width':2.5, 'stroke-dasharray':'6 5'});
   if (!REDUCE){

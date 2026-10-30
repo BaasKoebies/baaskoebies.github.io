@@ -428,7 +428,7 @@ footer .cycle i{display:inline-block;width:10px;height:10px;border-radius:2px;ma
 <!-- ============ SELECTED WORK ============ -->
 <section class="cell" id="work">
   <div class="cell-in"><span class="prompt">In&nbsp;[2]:</span><code>portfolio.<span class="fn">selected_work</span>(sort_by='impact')</code></div>
-  <p class="section-note">Client work, anonymised. Figures cleared with my employer; no client names or customer data. Written in the same format every project here uses: decision, answer, baseline, method, result, sensitivity, limitations.</p>
+  <p class="section-note">Client work, anonymised, with figures cleared by my employer, and public-data projects with full code. Every project uses the same format: decision, answer, baseline, method, result, sensitivity, limitations.</p>
 
   <div class="proj-stage">
   <details class="proj" style="--d:.0s">
@@ -498,6 +498,41 @@ footer .cycle i{display:inline-block;width:10px;height:10px;border-radius:2px;ma
       <p>Anonymised. Test duration, group sizes and the confidence interval on the 5% are not reproduced here.</p>
     </div>
   </details>
+
+  <details class="proj" style="--d:.24s">
+    <summary>
+      <span class="p-head">
+        <h3>Which customers should we call about a loan? About 11 in 100: R411k profit per 1,000 customers</h3>
+        <span class="metric">public bank data · offer targeting · calibrated LightGBM · 95% of the profit ceiling</span>
+      </span>
+      <span class="toggle"><span class="closed-label">expand +</span><span class="open-label">collapse −</span></span>
+    </summary>
+    <div class="p-body">
+      <h4>Decision</h4>
+      <p>Which customers should a bank's personal-lending team call about a loan offer, and what is the call list worth? The memo is addressed to a fictional Head of Personal Lending. The data is the public Thera Bank dataset of 5,000 customers.</p>
+      <h4>Answer</h4>
+      <p>Call the customers whose calibrated acceptance probability is 10% or higher, which is about 112 in every 1,000. Modelled profit is R411,020 per 1,000 customers, 95% of the R432,000 that perfect foresight would earn.</p>
+      <h4>Baseline</h4>
+      <p>Calling everyone loses R20,000 per 1,000 customers: only 9.6% accept, so the expected margin per call is below the cost of the call. A simple income cutoff earns R315,340. Calling nobody earns R0.</p>
+      <h4>Method</h4>
+      <ul>
+        <li>Unit economics are stated as assumptions: R500 per call and R5,000 margin per accepted loan. Break-even is a 10% probability (500 / 5,000), so the economics set the threshold rather than a fit.</li>
+        <li>Logistic regression and LightGBM, both Platt-calibrated inside each fold, tuned once on log loss and then frozen.</li>
+        <li>Repeated stratified 5-fold cross-validation with 10 repeats. The model was chosen on mean profit at the 10% threshold.</li>
+      </ul>
+      <h4>Result</h4>
+      <p>LightGBM earned the most in all 50 folds: R411,020 per 1,000 customers (SD R6,713), against R342,970 for logistic regression. At the threshold, precision is 83% and recall is 97%. PR-AUC is 0.99, against a 0.096 baseline.</p>
+      <h4>Sensitivity</h4>
+      <ul>
+        <li>At R1,000 per call, the threshold moves to 20% and profit falls to R358,000. LightGBM still wins.</li>
+        <li>If 25% or 50% of the customers who accept would have borrowed without a call, profit falls to R294,600 or R179,000. This assumes the share is the same for everyone, which flatters targeting.</li>
+        <li>Without the CD Account feature, profit drops by R3,000.</li>
+      </ul>
+      <h4>Limitations</h4>
+      <p>Every customer in the data was offered the loan, so there is no control group and the data can't show who would have borrowed anyway. The costs are assumptions, and the data looks partly generated. The next project uses a randomised experiment to close the control-group gap.</p>
+      <p><a href="https://github.com/BaasKoebies/DSProjects/tree/main/Portfolio/Project%201%20-%20Personal%20Loans" target="_blank" rel="noopener">Decision memo and code on GitHub ↗</a></p>
+    </div>
+  </details>
   </div>
 </section>
 
@@ -542,14 +577,13 @@ footer .cycle i{display:inline-block;width:10px;height:10px;border-radius:2px;ma
     <summary>
       <span class="p-head">
         <h3>Earlier work</h3>
-        <span class="metric">three tutorial-dataset projects · loan acceptance · movie recommender · car counter · code on GitHub</span>
+        <span class="metric">two tutorial-dataset projects · movie recommender · car counter · code on GitHub</span>
       </span>
       <span class="toggle"><span class="closed-label">expand +</span><span class="open-label">collapse −</span></span>
     </summary>
     <div class="p-body">
       <p>Projects from before the consulting work. Kept here because the code is public; the case studies are a better guide to how I work now.</p>
       <ul class="earlier-list">
-        <li><strong>Personal loan acceptance (Thera Bank, 5,000 rows).</strong> Post-pruned decision tree, accuracy 0.97 and recall 0.96. For context: 9.6% of customers accept, so predicting "no" for everyone scores 0.904. Accuracy is the wrong metric here. <a href="https://github.com/BaasKoebies/DSProjects/blob/main/Portfolio/Project%201%20-%20Personal%20Loans/model.ipynb" target="_blank" rel="noopener">Loan acceptance notebook ↗</a></li>
         <li><strong>Movie recommender (TMDB 5000).</strong> Popularity, content-based (TF-IDF, cosine similarity) and collaborative filtering (SVD via <code>surprise</code>, RMSE ≈ 0.89). <a href="https://github.com/BaasKoebies/DSProjects/tree/main/Portfolio/Project%202%20-%20Recommendation%20System" target="_blank" rel="noopener">Recommender repository ↗</a></li>
         <li><strong>Real-time car counter.</strong> YOLOv8m detection with SORT tracking and a line-crossing counter in OpenCV. <a href="https://github.com/BaasKoebies/DSProjects/tree/main/Portfolio/Project%203%20-%20Object%20Detection%20-%20Car%20counter" target="_blank" rel="noopener">Car counter repository ↗</a></li>
       </ul>
